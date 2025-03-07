@@ -1,5 +1,6 @@
 import js from "@eslint/js"
 import comments from "@eslint-community/eslint-plugin-eslint-comments/configs"
+import vitest from "@vitest/eslint-plugin"
 import gitignore from "eslint-config-flat-gitignore"
 import * as depend from "eslint-plugin-depend"
 import jsdoc from "eslint-plugin-jsdoc"
@@ -11,7 +12,6 @@ import * as regexp from "eslint-plugin-regexp"
 import security from "eslint-plugin-security"
 import sonarjs from "eslint-plugin-sonarjs"
 import unicorn from "eslint-plugin-unicorn"
-import vitest from "eslint-plugin-vitest"
 import ts from "typescript-eslint"
 
 export default [
@@ -102,6 +102,9 @@ export default [
       "prefer-arrow-callback": "error",
       "prefer-promise-reject-errors": "error", // cf. https://maximorlov.com/linting-rules-for-asynchronous-code-in-javascript/#7-prefer-promise-reject-errors
       "require-atomic-updates": "error", // cf. https://maximorlov.com/linting-rules-for-asynchronous-code-in-javascript/#4-require-atomic-updates
+      /* eslint-disable sonarjs/fixme-tag */
+      "unicorn/expiring-todo-comments": "off", // FIXME
+      /* eslint-enable */
       "vitest/prefer-strict-equal": "error",
     },
   },
