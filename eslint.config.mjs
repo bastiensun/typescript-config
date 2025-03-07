@@ -28,7 +28,6 @@ export default [
       },
     },
   },
-  /* eslint-disable sonarjs/no-duplicate-string */
   comments.recommended,
   depend.configs["flat/recommended"],
   jsdoc.configs["flat/logical-typescript"],
@@ -43,7 +42,6 @@ export default [
   sonarjs.configs.recommended,
   unicorn.configs["flat/recommended"],
   vitest.configs.recommended,
-  /* eslint-enable */
   {
     plugins: {
       node,
