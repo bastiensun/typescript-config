@@ -11,6 +11,7 @@ import promise from "eslint-plugin-promise"
 import * as regexp from "eslint-plugin-regexp"
 import security from "eslint-plugin-security"
 import sonarjs from "eslint-plugin-sonarjs"
+import tailwind from "eslint-plugin-tailwindcss"
 import unicorn from "eslint-plugin-unicorn"
 import ts from "typescript-eslint"
 
@@ -40,6 +41,7 @@ export default [
   regexp.configs["flat/recommended"],
   security.configs.recommended,
   sonarjs.configs.recommended,
+  ...tailwind.configs["flat/recommended"],
   unicorn.configs["flat/recommended"],
   vitest.configs.recommended,
   {
